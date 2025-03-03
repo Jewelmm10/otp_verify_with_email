@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+.custom-dash {
+  height: 100vh;
+  background: #e9ebee;
+  color: #1d2129;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  perspective: 1500px;
+}
+.custom-dash .version {
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
+  border-radius: 40px;
+  background: #ff4b2b;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.8em 2em;
+  letter-spacing: 1px;
+  transition: transform 80ms ease-in;
+}
+
+.custom-dash  input {
+  background: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  font-size: 1.4em;
+}
+
+.custom-dash span {
+  color: #333;
+  font-size: 1.4em;
+  display: inline-block;
+  margin: 15px auto;
+  font-weight: 100;
+}
+
+.custom-dash span.clearfix {
+  clear: both;
+  display: table;
+}
+
+.custom-dash span.copy {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  font-size: 1em;
+}
+
+.custom-dash button {
+  display: block;
+  margin: 1em auto;
+  border-radius: 40px;
+  border: 1px solid #ff4b2b;
+  background: #ff4b2b;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.4em 2em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+.custom-dash button svg {
+  vertical-align: middle;
+}
+
+.custom-dash button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.custom-dash button:focus {
+  outline: none;
+}
+
+.custom-dash a.btn {
+    display: inline-block;
+    margin: 1em auto;
+    border-radius: 40px;
+    border: 1px solid #ff4b2b;
+    background: #ff4b2b;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0.4em 2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+  }
+.custom-dash a.btn svg {
+    vertical-align: middle;
+  }
+  
+.custom-dash a.btn:hover {
+    cursor: pointer;
+  }
+  
+.custom-dash a.btn:active {
+    transform: scale(0.95);
+  }
+  
+.myform a.btn:focus {
+    outline: none;
+  }
+
+#container {
+  width: 95%;
+  max-width: 800px;
+  height: 500px;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 14px 28px -10px rgba(0, 0, 0, 0.1), 0 10px 10px -10px rgba(0, 0, 0, 0.02);
+  transform-style: preserve-3d;
+}
+#container > div {
+  position: absolute;
+  width: 50%;
+  min-width: 350px;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-dash .content {
+  width: 100%;
+  padding: 2em 4em;
+  text-align: center;
+}
+.custom-dash .content p {
+  font-size: 1.4em;
+}
+
+.custom-dash .login {
+  left: 0;
+  background: #FAFAFA;
+  border-radius: 20px 0 0 20px;
+}
+.custom-dash .login button {
+  border-radius: 0px;
+  width: 100%;
+}
+.custom-dash .login svg {
+  margin: 1em;
+  stroke: #999;
+}
+
+.custom-dash .register {
+  right: 0;
+  z-index: 1;
+  border-radius: 0 20px 20px 0;
+  background: #FAFAFA;
+}
+.custom-dash .register button {
+  border-radius: 0px;
+  width: 100%;
+}
+.custom-dash .register svg {
+  margin: 1em;
+  stroke: #999;
+}
+
+.custom-dash .page {
+  right: 0;
+  color: #fff;
+  border-radius: 0 20px 20px 0;
+  transform-origin: left center;
+  transition: -webkit-animation 1s linear;
+  transition: animation 1s linear;
+  transition: animation 1s linear, -webkit-animation 1s linear;
+}
+.custom-dash .page button {
+  border-color: #fff;
+  background: transparent;
+}
+.custom-dash .page a.btn {
+    border-color: #fff;
+    background: transparent;
+  }
+.custom-dash .page p {
+  margin: 2em auto;
+}
+
+.custom-dash .front {
+  background: linear-gradient(-45deg, #FFCF00 0%, #FC4F4F 100%) no-repeat 0 0/200%;
+  z-index: 3;
+}
+
+.custom-dash .back {
+  background: linear-gradient(135deg, #FC4F4F 0%, #FFCF00 100%) no-repeat 0 0/200%;
+  z-index: 2;
+}
+.custom-dash .back .content {
+  transform: rotateY(180deg);
+}
+
+.custom-dash .active .front {
+  -webkit-animation: rot-front 0.6s ease-in-out normal forwards;
+          animation: rot-front 0.6s ease-in-out normal forwards;
+}
+
+.custom-dash .active .back {
+  -webkit-animation: rot-back forwards;
+          animation: rot-back forwards;
+}
+
+.custom-dash .close .front {
+  -webkit-animation: close-rot-front 0.6s ease-in-out normal forwards;
+          animation: close-rot-front 0.6s ease-in-out normal forwards;
+}
+
+.custom-dash .close .back {
+  -webkit-animation: close-rot-back forwards;
+          animation: close-rot-back forwards;
+}
+
+@-webkit-keyframes rot-front {
+  from {
+    transform: translateZ(2px) rotateY(0deg);
+  }
+  to {
+    transform: translateZ(1px) rotateY(-180deg);
+  }
+}
+
+@keyframes rot-front {
+  from {
+    transform: translateZ(2px) rotateY(0deg);
+  }
+  to {
+    transform: translateZ(1px) rotateY(-180deg);
+  }
+}
+@-webkit-keyframes close-rot-front {
+  from {
+    transform: translateZ(1px) rotateY(-180deg);
+  }
+  to {
+    transform: translateZ(2px) rotateY(0deg);
+  }
+}
+@keyframes close-rot-front {
+  from {
+    transform: translateZ(1px) rotateY(-180deg);
+  }
+  to {
+    transform: translateZ(2px) rotateY(0deg);
+  }
+}
+@-webkit-keyframes rot-back {
+  from {
+    transform: translateZ(1px) rotateY(0deg);
+  }
+  to {
+    transform: translateZ(2px) rotateY(-180deg);
+  }
+}
+@keyframes rot-back {
+  from {
+    transform: translateZ(1px) rotateY(0deg);
+  }
+  to {
+    transform: translateZ(2px) rotateY(-180deg);
+  }
+}
+@-webkit-keyframes close-rot-back {
+  from {
+    transform: translateZ(2px) rotateY(-180deg);
+  }
+  to {
+    transform: translateZ(1px) rotateY(0deg);
+  }
+}
+@keyframes close-rot-back {
+  from {
+    transform: translateZ(2px) rotateY(-180deg);
+  }
+  to {
+    transform: translateZ(1px) rotateY(0deg);
+  }
+}
+.active .register .content {
+  -webkit-animation: show 0.7s ease-in-out normal forwards;
+          animation: show 0.7s ease-in-out normal forwards;
+}
+
+.close .register .content {
+  -webkit-animation: hide 0.7s ease-in-out normal forwards;
+          animation: hide 0.7s ease-in-out normal forwards;
+}
+
+.active .login .content {
+  -webkit-animation: hide 0.7s ease-in-out normal forwards;
+          animation: hide 0.7s ease-in-out normal forwards;
+}
+
+.close .login .content {
+  -webkit-animation: show 0.7s ease-in-out normal forwards;
+          animation: show 0.7s ease-in-out normal forwards;
+}
+
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 0.99;
+    transform: scale(0.99);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 0.99;
+    transform: scale(0.99);
+  }
+}
+@-webkit-keyframes hide {
+  from {
+    opacity: 0.99;
+    transform: scale(0.99);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+@keyframes hide {
+  from {
+    opacity: 0.99;
+    transform: scale(0.99);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}

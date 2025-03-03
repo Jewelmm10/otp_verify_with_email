@@ -99,7 +99,7 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For questions or assistance, please contact [your-email@example.com].
+For questions or assistance, please contact [jewelmm9@gmail.com].
 
 ---
 
